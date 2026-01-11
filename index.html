@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>East Bay Mini Monopoly</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <div>
+          <h1>East Bay Mini Monopoly</h1>
+          <p>
+            Roll the dice, travel around the neighborhood, and buy your favorite streets.
+            Perfect for a 7-year-old explorer!
+          </p>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-label">Money</span>
+            <span id="money" class="stat-value">$600</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Dice</span>
+            <span id="dice" class="stat-value">-</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Position</span>
+            <span id="position" class="stat-value">Start</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="controls">
+        <button id="roll" class="primary">Roll Dice</button>
+        <button id="buy" class="secondary" disabled>Buy Street</button>
+        <button id="reset" class="ghost">Reset Game</button>
+      </section>
+
+      <section class="board" aria-label="Game board"></section>
+
+      <section class="message" aria-live="polite">
+        <h2>Game Guide</h2>
+        <p id="message">Tap “Roll Dice” to start your adventure.</p>
+      </section>
+
+      <section class="legend">
+        <h3>Owned Streets</h3>
+        <ul id="owned-list"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
